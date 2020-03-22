@@ -125,14 +125,15 @@ public class Darkness {
 	private static float skyFactor(World world) {
 		if (isDark(world)) {
 			if (world.dimension.hasSkyLight()) {
-				final float angle = world.getSkyAngle(0);
-				if (angle > 0.25f && angle < 0.75f) {
-					final float oldWeight = Math.max(0, (Math.abs(angle - 0.5f) - 0.2f)) * 20;
-					final float moon = world.getMoonSize();
-					return MathHelper.lerp(oldWeight * oldWeight * oldWeight, moon * moon, 1f);
-				} else {
-					return 1;
-				}
+//				final float angle = world.getSkyAngle(0);
+//				if (angle > 0.25f && angle < 0.75f) {
+//					final float oldWeight = Math.max(0, (Math.abs(angle - 0.5f) - 0.2f)) * 20;
+//					final float moon = world.getMoonSize();
+//					return MathHelper.lerp(oldWeight * oldWeight * oldWeight, moon * moon, 1f);
+//				} else {
+//					return 1;
+//				}
+				return 0.3f;
 			} else {
 				return 0;
 			}
